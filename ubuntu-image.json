@@ -11,7 +11,7 @@
 		"client_secret": "ogp8Q~WE~miPLjndPsUb21LeU0oMAFAAoU.g6a_G",
 		"subscription_id": "dc933b17-bf92-46b9-ae77-7cfc63f485bb",
 
-		"managed_image_resource_group_name": "Azuredevops",
+		"managed_image_resource_group_name": "RG-myPackerImage",
 		"managed_image_name": "ubuntuImage",
 		
 		"os_type": "Linux",
