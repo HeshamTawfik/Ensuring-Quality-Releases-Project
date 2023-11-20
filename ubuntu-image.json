@@ -1,15 +1,18 @@
 {    
-	"variables": {
-		"client_id": "{{env `ARM_CLIENT_ID`}}",
-		"client_secret": "{{env `ARM_CLIENT_SECRET`}}",
-		"subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}"
-	},
+  "variables": {
+	        "client_id": "",
+		"client_secret": "",
+		"subscription_id": "",
+		"tenant_id": ""
+                },
+	
 	"builders": [{
 		"type": "azure-arm",
 
-		"client_id": "5823e222-f8c4-4a32-9724-35aa6027d4b5",
-		"client_secret": "L.Q8Q~tjNxNVUr_m76Vemln3gK~qDWWZJZMhHcfH",
-		"subscription_id": "dc933b17-bf92-46b9-ae77-7cfc63f485bb",
+		"client_id": "{{user `client_id`}}",
+		"client_secret": "{{user `client_secret`}}",
+		"subscription_id": "{{user `subscription_id`}}",
+		"tenant_id": "{{user `tenant_id`}}",
 
 		"managed_image_resource_group_name": "RG-myPackerImage",
 		"managed_image_name": "ubuntuImage",
@@ -19,7 +22,7 @@
 		"image_offer": "UbuntuServer",
 		"image_sku": "18.04-LTS",
 		
-		"location": "East US",
+		"location": "East US 2",
 		"vm_size": "Standard_D2s_v3",
 		
 		}],
