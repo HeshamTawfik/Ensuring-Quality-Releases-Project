@@ -19,7 +19,7 @@ stages:
     - job: Provision_Azure_IaC
       displayName: Provision Azure IaC
       pool:
-        vmImage: 'ubuntu 22.04'
+        vmImage: 'ubuntu-22.04'
       steps:
       - task: DownloadSecureFile@1
         name: tfvardef
@@ -137,7 +137,7 @@ stages:
     jobs:
     - deployment: FakeRestAPIDeploy
       pool:
-        vmImage: 'ubuntu 22.04'
+        vmImage: 'ubuntu-22.04'
       environment: 'WEBAPP-TEST'
       strategy:
         runOnce:
@@ -249,7 +249,7 @@ stages:
     - job: JMETERTests
       displayName: Test JMeter
       pool:
-        vmImage: 'ubuntu 22.04'
+        vmImage: 'ubuntu-22.04'
       steps:
       - bash: |
           sudo apt-get install openjdk-11-jre-headless -y
@@ -362,7 +362,7 @@ stages:
     - job: Destroy_Azure_IaC
       displayName: Destroy Azure IaC
       pool:
-        vmImage: 'ubuntu 22.04'
+        vmImage: 'ubuntu-22.04'
       steps:
       - task: DownloadSecureFile@1
         name: tfvardef
