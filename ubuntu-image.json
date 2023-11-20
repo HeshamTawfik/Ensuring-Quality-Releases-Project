@@ -23,9 +23,9 @@
 		"image_sku": "18.04-LTS",
 		
 		"location": "East US 2",
-		"vm_size": "Standard_D2s_v3",
-		
+		"vm_size": "Standard_D2s_v3"
 		}],
+	
 	"provisioners": [{
 		"inline": [
 			"echo 'Hello, World!' > index.html",
