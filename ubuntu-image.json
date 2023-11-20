@@ -1,43 +1,46 @@
-{
-  "builders": [
-    {
-      "type": "azure-arm",
+{    
+	"variables": {
+		"client_id": "{{env `ARM_CLIENT_ID`}}",
+		"client_secret": "{{env `ARM_CLIENT_SECRET`}}",
+		"subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}"
+	},
+	"builders": [{
+		"type": "azure-arm",
 
-      "client_id": "{{env `ARM_CLIENT_ID`}}",
-      "client_secret": "{{env `ARM_CLIENT_SECRET`}}",
-      "tenant_id": "{{env `ARM_TENANT_ID`}}",
-      "subscription_id": "{{env `ARM_SUBSCRIPTION_ID`}}",
+		"client_id": "f6a8161b-80ec-4739-ab0c-370d87457b13",
+		"client_secret": "Uy28Q~oGm9FYvflBKgInAvbn6oOh9pgq1MF~waA8",cd
+		"subscription_id": "e85c2d28-e9aa-4775-85de-521be630b9fa",
 
-      "managed_image_resource_group_name": "RG-myPackerImage",
-      "managed_image_name": "ubuntu-image",
+		"managed_image_resource_group_name": "RG-myPackerImage",
+		"managed_image_name": "ubuntuImage",
+		
+		"os_type": "Linux",
+		"image_publisher": "Canonical",
+		"image_offer": "UbuntuServer",
+		"image_sku": "18.04-LTS",
+		
+		"location": "East US",
+		"vm_size": "Standard_D2s_v3",
+		
+		"azure_tags": {
+			"Dept": "DevOps",
+			"Environment": "Production",
+			"Project":  "Deploying a Web Server in Azure"
+		  }
 
-      "os_type": "Linux",
-      "image_publisher": "Canonical",
-      "image_offer": "UbuntuServer",
-      "image_sku": "18.04-LTS",
+		}],
+	"provisioners": [{
+		"inline": [
+			"echo 'Hello, World!' > index.html",
+			"nohup busybox httpd -f -p 80 &",
+			"sudo apt-get update",
+            "sudo apt-get install -y apache2",
+            "sudo systemctl start apache2",
+            "sudo systemctl enable apache2"
+		],
+		"inline_shebang": "/bin/sh -x",
+		"type": "shell",
+		"execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'"
 
-      "communicator": "ssh",
-      "ssh_username": "packer",
-      "ssh_password": "packer",
-      "ssh_port": 22,
-
-      "azure_tags": {
-        "dept": "Engineering",
-        "task": "Image deployment"
-      }
-    }
-  ],
-  "provisioners": [
-    {
-      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",
-      "inline": [
-        "apt-get update",
-        "apt-get upgrade -y",
-        "apt-get install -y nginx",
-        "systemctl enable nginx"
-      ],
-      "inline_shebang": "/bin/sh -x",
-      "type": "shell"
-    }
-  ]
+	}]
 }
