@@ -19,7 +19,7 @@
 		"image_offer": "UbuntuServer",
 		"image_sku": "18.04-LTS",
 		
-		"location": "East US",
+		"location": "East US 2",
 		"vm_size": "Standard_D2s_v3",
 		
 		"azure_tags": {
