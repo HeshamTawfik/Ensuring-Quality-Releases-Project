@@ -142,7 +142,7 @@ Complete the following parameters:
 
 ```bash
   backend "azurerm" {
-    storage_account_name = "tstate3994"
+    storage_account_name = "tstate1147"
     container_name       = "tstate"
     key                  = "terraform.tfstate"
     access_key           = "<access key>"
@@ -164,13 +164,13 @@ Complete the following parameters:
 
 > be sure that you are verified and authenticated here!!!
 > get the url to have the Service Connection ID:
-(https://dev.azure.com/<organiztion>/<project>/_apis/serviceendpoint/endpoints?api-version=5.0-preview.2)
+(https://dev.azure.com/<organiztion>/<project>/_apis/serviceendpoint/endpoints?api-version=7.0-preview.2)
  
 8.4. Add into Pipelines --> Library --> Secure files these 2 files:
 the private secure file : **id_rsa key**
 the terraform tfvars file : **terraform.tfvars**
 
-![img1](./images/Library-SecureFiles.png)
+<img width="767" alt="Library" src="https://github.com/HeshamTawfik/Ensuring-Quality-Releases-Project/assets/33587812/853acfe5-3e08-430a-aac5-3e2e3446e2bd">
 
 8.5. Create a Pipeline --> Environment named "VM-TEST" as is the one used in the pipeline.yaml. Copy the Registration script ( in Linux) since it must be executed on the created VM :
 
