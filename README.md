@@ -181,17 +181,7 @@ mkdir azagent;cd azagent;curl -fkSL -o vstsagent.tar.gz https://vstsagentpackage
 
 > Enter the above script into the linux VM created on terraform by ssh and execute it, to get at the end a result like:
 
-```bash
-Successfully added the agent
-Testing agent connection.
-....
-   Active: active (running) since Tue 2021-03-09 03:20:16 UTC; 13ms ago
- Main PID: 2330 (runsvc.sh)
-    Tasks: 7 (limit: 4680)
-   CGroup: /system.slice/vsts.agent.javiercaparo574..ci\x2dcd\x2dtest\x2dautomation.service
-           ├─2330 /bin/bash /home/udacity/azagent/runsvc.sh
-           └─2333 ./externals/node10/bin/node ./bin/AgentService.js
-```
+<img width="944" alt="2" src="https://github.com/HeshamTawfik/Ensuring-Quality-Releases-Project/assets/33587812/7a880847-a1cb-4092-8dec-4954c05e342b">
 
 9. Modify the following lines on azure-pipelines.yaml before to update your own repo :
 
