@@ -6,7 +6,7 @@ tenant_id       = "f8f2b262-3288-43e2-b298-21d7280c6b3a"
 
 # Resource Group/Location
 location         = "eastus2"
-resource_group   = "RG-udacity_project"
+resource_group   = "RG-myPackerImage"
 application_type = "appService"
 
 # Network
@@ -15,7 +15,7 @@ address_space        = ["10.5.0.0/16"]
 address_prefix_test  = "10.5.1.0/24"
 
 # VM
-packer_image   = "to fill"
+packer_image   = "ubuntuImage"
 admin_username = "udacity"
 
 # public key in azure pipelines
