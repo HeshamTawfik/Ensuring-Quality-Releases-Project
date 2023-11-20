@@ -6,11 +6,11 @@ tenant_id       = "f8f2b262-3288-43e2-b298-21d7280c6b3a"
 
 # Resource Group/Location
 location         = "eastus2"
-resource_group   = "RG-udacity_project3"
-application_type = "to fill"
+resource_group   = "RG-udacity_project"
+application_type = "appService"
 
 # Network
-virtual_network_name = "to fill"
+virtual_network_name = "udacityP3-vnet"
 address_space        = ["10.5.0.0/16"]
 address_prefix_test  = "10.5.1.0/24"
 
