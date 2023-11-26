@@ -29,12 +29,14 @@ resource "azurerm_linux_virtual_machine" "test" {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
-#  source_image_reference {
-#    publisher = "Canonical"
-#    offer     = "UbuntuServer"
-#    sku       = "18.04-LTS"
-#    version   = "latest"
-  tags = {
+
+source_image_reference {
+    publisher = "Canonical"
+    offer     = "UbuntuServer"
+    sku       = "22.04"
+    version   = "latest"
+
+tags = {
     project_name = "QA"
     stage        = "Testing"
   }
