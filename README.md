@@ -181,7 +181,8 @@ mkdir azagent;cd azagent;curl -fkSL -o vstsagent.tar.gz https://vstsagentpackage
 
 > Enter the above script into the linux VM created on terraform by ssh and execute it, to get at the end a result like:
 
-<img width="944" alt="2" src="https://github.com/HeshamTawfik/Ensuring-Quality-Releases-Project/assets/33587812/7a880847-a1cb-4092-8dec-4954c05e342b">
+![Screenshot from 2023-11-26 17-02-56](https://github.com/HeshamTawfik/Ensuring-Quality-Releases-Project/assets/33587812/2b0de01e-7af4-46df-83d1-ff166052f4cc)
+
 
 9. Modify the following lines on azure-pipelines.yaml before to update your own repo :
 
