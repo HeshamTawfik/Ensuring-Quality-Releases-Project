@@ -6,16 +6,16 @@ tenant_id       = "f8f2b262-3288-43e2-b298-21d7280c6b3a"
 
 # Resource Group/Location
 location         = "eastus2"
-resource_group   = "RG-udacity_project3"
-application_type = "to fill"
+resource_group   = "RG-myPackerImage"
+application_type = "EQRP"
 
 # Network
-virtual_network_name = "to fill"
-address_space        = ["10.5.0.0/16"]
-address_prefix_test  = "10.5.1.0/24"
+virtual_network_name = "PackerImageVNET"
+address_space        = ["10.0.0.0/16"]
+address_prefix_test  = "10.0.1.0/24"
 
 # VM
-packer_image   = "to fill"
+packer_image   = "PackerImage"
 admin_username = "udacity"
 
 # public key in azure pipelines
