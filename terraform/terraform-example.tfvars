@@ -19,7 +19,7 @@ packer_image   = "PackerImage"
 admin_username = "udacity"
 
 # public key in azure pipelines
- public_key_path = "/home/hesham/id_rsa.pub"
+ public_key_path = "/home/hesham/id_rsa"
 
 # public key on Windows local machine
 # public_key_path = "~/.ssh/id_rsa.pub"
