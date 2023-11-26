@@ -3,9 +3,9 @@ resource "azurerm_app_service_plan" "test" {
   location            = var.location
   resource_group_name = var.resource_group
 
-  sku {
-    tier = "Free"
-    size = "F1"
+    sku {
+    tier = "Standard"
+    size = "D1"
   }
 }
 
