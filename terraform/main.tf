@@ -65,6 +65,7 @@ module "vm" {
   location        = var.location
   subnet_id       = module.network.subnet_id_test
   resource_group  = module.resource_group.resource_group_name
+  resource_type        = "VM"
   public_ip       = module.publicip.public_ip_address_id
   admin_username  = var.admin_username
   packer_image    = var.packer_image
