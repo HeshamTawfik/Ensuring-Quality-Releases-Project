@@ -6,7 +6,7 @@ tenant_id       = "f8f2b262-3288-43e2-b298-21d7280c6b3a"
 
 # Resource Group/Location
 location         = "eastus2"
-resource_group   = "RG-myPackerImage"
+resource_group   = "RG-udacity_project3"
 application_type = "EQRP"
 
 # Network
